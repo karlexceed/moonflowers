@@ -25,3 +25,8 @@ minetest.register_node("moonflowers:moonflower", {
 		fixed = {-0.3, -0.5, -0.3, 0.3, -0.5+0.7, 0.3},
 	},
 })
+
+-- Add support for the flowerpot mod
+if minetest.get_modpath("flowerpot") then
+	flowerpot.register_node("moonflowers:moonflower")
+end

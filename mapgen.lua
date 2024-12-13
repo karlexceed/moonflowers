@@ -2,14 +2,14 @@
 -- Detect mapgen to select functions
 --
 
-local mg_name = minetest.get_mapgen_setting("mg_name")
+local mg_name = core.get_mapgen_setting("mg_name")
 if mg_name == "v6" then
 
 	--
 	-- Mgv6
 	--
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "moonflowers:moonflower",
 		deco_type = "simple",
 		place_on = {"default:dirt_with_grass", "default:dirt_with_coniferous_litter", "default:dirt_with_snow", "default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter"},
@@ -35,7 +35,7 @@ else
 	-- All other biome API mapgens
 	--
 
-	minetest.register_decoration({
+	core.register_decoration({
 		name = "moonflowers:moonflower",
 		deco_type = "simple",
 		place_on = {"default:dirt_with_grass", "default:dirt_with_coniferous_litter", "default:dirt_with_snow", "default:dry_dirt_with_dry_grass", "default:dirt_with_rainforest_litter"},

@@ -1,12 +1,15 @@
--- moonflowers
+-- moonflowers/init.lua
+
 
 -- Load support for MT game translation.
-local S = minetest.get_translator(minetest.get_current_modname())
+local S = core.get_translator(core.get_current_modname())
+
 
 -- Map Generation
-dofile(minetest.get_modpath("moonflowers") .. "/mapgen.lua")
+dofile(core.get_modpath("moonflowers") .. "/mapgen.lua")
 
-minetest.register_node("moonflowers:moonflower", {
+
+core.register_node("moonflowers:moonflower", {
 	description= S("Moonflower"),
 	drawtype = "plantlike",
 	waving = 1,
@@ -26,7 +29,8 @@ minetest.register_node("moonflowers:moonflower", {
 	},
 })
 
+
 -- Add support for the flowerpot mod
-if minetest.get_modpath("flowerpot") then
+if core.get_modpath("flowerpot") then
 	flowerpot.register_node("moonflowers:moonflower")
 end
